@@ -73,7 +73,6 @@ inputs:
 runs:
   using: 'docker'
   image: docker://effectivemachines/buretoolbox:test-action
-  options: -u 1001 -g 121
   args:
     - test-patch
     - --basedir=${{ inputs.basedir }}
