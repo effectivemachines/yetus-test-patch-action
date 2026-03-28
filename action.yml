@@ -48,7 +48,7 @@ inputs:
     default: ''
   javahome:
     description: 'Location of the JDK to use'
-    default: '/usr/lib/jvm/java-11-openjdk-amd64'
+    default: '/usr/lib/jvm/default-java'
   patchdir:
     description: 'Directory location of logs, temp space, etc'
     required: true
@@ -72,7 +72,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: docker://ghcr.io/apache/yetus:main
+  image: docker://ghcr.io/effectivemachines/buretoolbox:main
   args:
     - test-patch
     - --basedir=${{ inputs.basedir }}
